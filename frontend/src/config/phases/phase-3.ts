@@ -10,6 +10,10 @@ export type Phase3PageId =
   | 'docker-step-5'
   | 'docker-step-6'
   | 'docker-step-7'
+  | 'docker-release-flow'
+  | 'docker-check-image'
+  | 'docker-linux-server'
+  | 'docker-solve-issues'
   | 'docker-commands'
   | 'docker-mistakes'
   | 'docker-break-it'
@@ -69,6 +73,35 @@ export const PHASE_3: Phase<Phase3PageId> = {
         createStep('docker-step-5', 5, 'Volumes and networks', 'Keep data and connect containers.'),
         createStep('docker-step-6', 6, 'Docker Compose', 'Start everything with one command.'),
         createStep('docker-step-7', 7, 'Docker Hub', 'Upload and download your image.'),
+      ],
+    },
+    {
+      title: 'Real deployment',
+      pages: [
+        {
+          id: 'docker-release-flow',
+          path: `${PATH}/release-flow`,
+          title: 'From code to server',
+          summary: 'The full path of one release.',
+        },
+        {
+          id: 'docker-check-image',
+          path: `${PATH}/check-image`,
+          title: 'Check the image before push',
+          summary: 'Find problems before anyone gets the image.',
+        },
+        {
+          id: 'docker-linux-server',
+          path: `${PATH}/linux-server`,
+          title: 'Run it on a Linux server',
+          summary: 'Pull, run, check, update and roll back.',
+        },
+        {
+          id: 'docker-solve-issues',
+          path: `${PATH}/solve-issues`,
+          title: 'Solve issues',
+          summary: 'Find the cause and fix it, step by step.',
+        },
       ],
     },
     {

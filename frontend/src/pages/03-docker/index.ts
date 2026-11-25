@@ -1,11 +1,15 @@
 import type { ComponentType } from 'react'
 import type { Phase3PageId } from '../../config/phases/phase-3'
 import { BreakIt } from './BreakIt'
+import { CheckImage } from './CheckImage'
 import { Commands } from './Commands'
 import { FinalCheck } from './FinalCheck'
+import { LinuxServer } from './LinuxServer'
 import { Mistakes } from './Mistakes'
 import { Overview } from './Overview'
+import { ReleaseFlow } from './ReleaseFlow'
 import { Setup } from './Setup'
+import { SolveIssues } from './SolveIssues'
 import { Step1 } from './Step1'
 import { Step2 } from './Step2'
 import { Step3 } from './Step3'
@@ -24,6 +28,10 @@ export const DOCKER_PAGES: Record<Phase3PageId, ComponentType> = {
   'docker-step-5': Step5,
   'docker-step-6': Step6,
   'docker-step-7': Step7,
+  'docker-release-flow': ReleaseFlow,
+  'docker-check-image': CheckImage,
+  'docker-linux-server': LinuxServer,
+  'docker-solve-issues': SolveIssues,
   'docker-commands': Commands,
   'docker-mistakes': Mistakes,
   'docker-break-it': BreakIt,
