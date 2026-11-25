@@ -8,7 +8,7 @@ export interface Command {
 
 interface CommandBlockProps {
   commands: Command[]
-  terminal?: string
+  terminal?: 'PowerShell' | 'Ubuntu'
 }
 
 export function CommandBlock({ commands, terminal = 'PowerShell' }: CommandBlockProps) {
@@ -23,8 +23,8 @@ export function CommandBlock({ commands, terminal = 'PowerShell' }: CommandBlock
         )}
       </div>
       <ul className="divide-y divide-line">
-        {commands.map(({ command, purpose }) => (
-          <li key={command} className="p-3">
+        {commands.map(({ command, purpose }, index) => (
+          <li key={`${index}-${command}`} className="p-3">
             <div className="flex items-center justify-between gap-2 rounded-md border border-command-line bg-command pl-3">
               <code className="min-w-0 flex-1 py-2 font-mono text-sm leading-6 wrap-anywhere whitespace-pre-wrap">
                 <CommandText command={command} />

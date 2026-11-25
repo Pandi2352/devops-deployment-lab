@@ -6,6 +6,7 @@ const TOKEN_STYLES: Record<TokenType, string> = {
   option: 'text-command-option',
   text: 'text-command-text',
   placeholder: 'font-bold text-command-placeholder',
+  operator: 'font-bold text-foreground',
   value: 'text-foreground',
 }
 

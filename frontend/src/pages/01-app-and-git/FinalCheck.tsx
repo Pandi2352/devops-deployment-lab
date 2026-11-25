@@ -1,7 +1,8 @@
 import { CommandBlock, type Command } from '../../components/CommandBlock'
-import { InlineCode, Paragraph, SectionTitle, TextLink } from '../../components/Content'
+import { InlineCode, Paragraph, SectionTitle } from '../../components/Content'
+import { PageLink } from '../../components/PageLink'
 import { StepPage } from '../../components/StepPage'
-import { SITE } from '../../config/site'
+import { PHASE_2 } from '../../config/phases/phase-2'
 
 const CHECKS = [
   { key: 'styling', text: 'Page shows with Tailwind styling' },
@@ -43,7 +44,7 @@ export function FinalCheck() {
       <SectionTitle>Commands to check it</SectionTitle>
       <CommandBlock commands={CHECK_COMMANDS} />
       <Paragraph>
-        Next: <TextLink href={SITE.phase2Url}>Phase 2</TextLink>
+        Next: <PageLink to={PHASE_2.path}>Phase 2</PageLink>
       </Paragraph>
     </StepPage>
   )
