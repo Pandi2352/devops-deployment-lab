@@ -1,4 +1,5 @@
 import { CommandBlock, type Command } from '../../components/CommandBlock'
+import { InlineCommand } from '../../components/CommandText'
 import { InlineCode, Note, NumberedList, Paragraph, SectionTitle } from '../../components/Content'
 import { StepPage } from '../../components/StepPage'
 
@@ -79,11 +80,11 @@ export function BreakIt() {
           <strong>merge conflict</strong>.
         </li>
         <li>
-          Commit a mistake, merge it, then undo it with <InlineCode>git revert</InlineCode>.
+          Commit a mistake, merge it, then undo it with <InlineCommand command="git revert" />.
         </li>
       </NumberedList>
       <Note>
-        Before you start, run <InlineCode>git status</InlineCode>. Commit your other work first, so
+        Before you start, run <InlineCommand command="git status" />. Commit your other work first, so
         it does not mix with the practice.
       </Note>
 

@@ -1,4 +1,5 @@
 import { CommandBlock, type Command } from '../../components/CommandBlock'
+import { InlineCommand } from '../../components/CommandText'
 import {
   InlineCode,
   NumberedList,
@@ -38,7 +39,7 @@ const PUSH_ERRORS = [
     label: <InlineCode>remote origin already exists</InlineCode>,
     value: (
       <>
-        <InlineCode>{SET_URL_COMMAND}</InlineCode>
+        <InlineCommand command={SET_URL_COMMAND} />
         <span className="block text-muted">Purpose: change the saved GitHub address.</span>
       </>
     ),

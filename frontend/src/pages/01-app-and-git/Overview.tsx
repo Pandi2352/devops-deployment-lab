@@ -1,4 +1,5 @@
 import { Link } from 'react-router'
+import { CommandLegend } from '../../components/CommandLegend'
 import { InlineCode, Paragraph, SectionTitle } from '../../components/Content'
 import { StepPage } from '../../components/StepPage'
 import { GUIDE_GROUPS, getPageName } from '../../config/guide'
@@ -15,6 +16,9 @@ export function Overview() {
       <Paragraph>
         Use <strong>PowerShell</strong> in <InlineCode>D:\devops\react-devops</InlineCode>.
       </Paragraph>
+
+      <SectionTitle>Command colors</SectionTitle>
+      <CommandLegend />
 
       {STEP_GROUPS.map((group) => (
         <section key={group.title} className="space-y-3">

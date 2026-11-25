@@ -11,6 +11,13 @@
   --color-primary: #1d4ed8;
   --color-focus: #1d4ed8;
 
+  --color-command: #eff6ff;
+  --color-command-line: #bfdbfe;
+  --color-command-program: #1d4ed8;
+  --color-command-option: #9a3412;
+  --color-command-text: #166534;
+  --color-command-placeholder: #be123c;
+
   --spacing-sidebar: 17rem;
   --spacing-header: 3.5rem;
 }
