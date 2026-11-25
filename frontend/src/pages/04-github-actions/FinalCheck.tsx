@@ -5,10 +5,10 @@ import {
   NumberedList,
   Paragraph,
   SectionTitle,
-  TextLink,
 } from '../../components/Content'
+import { PageLink } from '../../components/PageLink'
 import { StepPage } from '../../components/StepPage'
-import { SITE } from '../../config/site'
+import { PHASE_5 } from '../../config/phases/phase-5'
 
 const CHECKS = [
   { key: 'blocks', text: 'A failing test blocks the merge' },
@@ -73,7 +73,7 @@ export function FinalCheck() {
       <Note>Do this only after the pull request is merged.</Note>
       <CommandBlock commands={TAG} />
       <Paragraph>
-        Next: <TextLink href={SITE.phase5Url}>Phase 5</TextLink>
+        Next: <PageLink to={PHASE_5.path}>Phase 5</PageLink>
       </Paragraph>
     </StepPage>
   )
