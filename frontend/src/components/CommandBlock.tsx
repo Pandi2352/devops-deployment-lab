@@ -1,3 +1,4 @@
+import { CommandText } from './CommandText'
 import { CopyButton } from './CopyButton'
 
 export interface Command {
@@ -23,14 +24,14 @@ export function CommandBlock({ commands, terminal = 'PowerShell' }: CommandBlock
       </div>
       <ul className="divide-y divide-line">
         {commands.map(({ command, purpose }) => (
-          <li key={command} className="flex items-start justify-between gap-3 py-1 pr-1 pl-4">
-            <div className="min-w-0 flex-1 py-2">
-              <code className="block font-mono text-sm leading-6 wrap-anywhere whitespace-pre-wrap">
-                {command}
+          <li key={command} className="p-3">
+            <div className="flex items-center justify-between gap-2 rounded-md border border-command-line bg-command pl-3">
+              <code className="min-w-0 flex-1 py-2 font-mono text-sm leading-6 wrap-anywhere whitespace-pre-wrap">
+                <CommandText command={command} />
               </code>
-              <p className="mt-1 text-sm leading-6 text-muted">{purpose}</p>
+              <CopyButton text={command} name={command} />
             </div>
-            <CopyButton text={command} name={command} />
+            <p className="mt-2 px-3 text-sm leading-6 text-muted">{purpose}</p>
           </li>
         ))}
       </ul>

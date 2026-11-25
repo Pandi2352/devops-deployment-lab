@@ -1,4 +1,5 @@
-import { InlineCode, SectionTitle } from '../../components/Content'
+import { InlineCommand } from '../../components/CommandText'
+import { SectionTitle } from '../../components/Content'
 import { ReferenceTable } from '../../components/ReferenceTable'
 import { StepPage } from '../../components/StepPage'
 
@@ -71,7 +72,7 @@ function getRows(items: CommandGroup['items']) {
     label: commands.map((command, index) => (
       <span key={command}>
         {index > 0 && ' / '}
-        <InlineCode>{command}</InlineCode>
+        <InlineCommand command={command} />
       </span>
     )),
     value: use,
