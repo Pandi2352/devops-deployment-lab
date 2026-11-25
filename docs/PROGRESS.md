@@ -15,12 +15,12 @@ Tick a box only after the **Done when** check in that guide passes.
 - [ ] GitHub CLI (`gh`) logged in
 
 ## Phase 1: App and Git
-- [ ] Vite React TS app runs
-- [ ] Tailwind works
-- [ ] Test passes
-- [ ] Public GitHub repo
-- [ ] First pull request merged
-- [ ] `main` branch protected
+- [x] Vite React TS app runs
+- [x] Tailwind works
+- [x] Test passes
+- [x] Public GitHub repo
+- [x] First pull request merged
+- [x] `main` branch protected
 
 ## Phase 2: Linux
 - [ ] Files and permissions
