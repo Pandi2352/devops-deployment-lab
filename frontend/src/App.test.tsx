@@ -13,7 +13,7 @@ function renderPath(path: string) {
 }
 
 test('shows the page title', () => {
-  expect(renderPath('/')).toContain('DevOps Lab')
+  expect(renderPath('/')).toContain('Wrong title')
 })
 
 test.each(GUIDE_PAGES)('shows $path', (page) => {
