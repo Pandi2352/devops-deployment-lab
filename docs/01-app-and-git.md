@@ -92,7 +92,7 @@ npm run preview
 
 `dev` and `preview` keep running; stop them with Ctrl+C. After `build`, look inside `dist`: **this folder is what we deploy**.
 
-## Part B: Git and GitHub
+## Part B: Git and GitHub ✅
 
 ### Step 6: Root files ✅
 
@@ -150,9 +150,9 @@ A small React app deployed with Docker, Kubernetes, AWS and GitOps.
 Plan: [docs/README.md](docs/README.md)
 ```
 
-**LICENSE:** create it on GitHub after step 8 in a pull request (Add file → name it `LICENSE` → Choose a license template → MIT).
+**LICENSE:** create it on GitHub after step 8 in a pull request (Add file → name it `LICENSE` → Choose a license template → MIT). ✅
 
-### Step 7: First commit
+### Step 7: First commit ✅
 
 ```powershell
 git init
@@ -161,7 +161,7 @@ git add .
 git commit -m "Create React app and docs"
 ```
 
-### Step 8: Create the GitHub repo (on the website)
+### Step 8: Create the GitHub repo (on the website) ✅
 
 **Create it:**
 
@@ -191,7 +191,7 @@ Replace `<GITHUB_USER>` with your GitHub username. On the first push, a browser 
 
 Refresh the GitHub page. You should see your files.
 
-### Step 9: Branch and pull request
+### Step 9: Branch and pull request ✅
 
 ```powershell
 git switch -c feat/change-title
@@ -221,7 +221,7 @@ git pull
 git branch -d feat/change-title
 ```
 
-### Step 10: Protect main
+### Step 10: Protect main ✅
 
 GitHub → Settings → Rules → Rulesets → New branch ruleset:
 
