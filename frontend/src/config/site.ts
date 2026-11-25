@@ -6,4 +6,3 @@ export const SITE = {
   costGuideUrl: `${DOCS_URL}/COST-GUIDE.md`,
   phase4Url: `${DOCS_URL}/04-github-actions.md`,
 }
-export const size: number = 'big'
