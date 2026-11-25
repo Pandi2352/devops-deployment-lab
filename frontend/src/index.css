@@ -1,1 +1,29 @@
 @import "tailwindcss";
+
+@theme {
+  --color-page: #f8fafc;
+  --color-surface: #ffffff;
+  --color-subtle: #f1f5f9;
+  --color-foreground: #0f172a;
+  --color-muted: #475569;
+  --color-line: #e2e8f0;
+  --color-control-line: #858fa1;
+  --color-primary: #1d4ed8;
+  --color-success: #15803d;
+  --color-focus: #1d4ed8;
+
+  --spacing-sidebar: 17rem;
+  --spacing-header: 3.5rem;
+}
+
+@layer base {
+  body {
+    background-color: var(--color-page);
+    color: var(--color-foreground);
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--color-focus);
+    outline-offset: 2px;
+  }
+}

@@ -1,4 +1,4 @@
-# Phase 1: App and Git (Free)
+# Phase 1: App and Git (Free) ✅
 
 **Goal:** a working React + TypeScript + Tailwind app in a public GitHub repo, changed through pull requests.
 
@@ -250,8 +250,8 @@ After phase 4 also add: require status checks.
 
 ## Done when
 
-- [ ] Page shows with Tailwind styling
-- [ ] lint, test and build all pass
-- [ ] One pull request merged, and a direct push to `main` is blocked
+- [x] Page shows with Tailwind styling
+- [x] lint, test and build all pass
+- [x] One pull request merged, and a direct push to `main` is blocked
 
 Next: [Phase 2](02-linux.md)
