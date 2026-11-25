@@ -1,10 +1,11 @@
 import type { GuidePage, Phase } from './guide.types'
 import { PHASE_1, type Phase1PageId } from './phases/phase-1'
 import { PHASE_2, type Phase2PageId } from './phases/phase-2'
+import { PHASE_3, type Phase3PageId } from './phases/phase-3'
 
-export type GuidePageId = Phase1PageId | Phase2PageId
+export type GuidePageId = Phase1PageId | Phase2PageId | Phase3PageId
 
-export const PHASES: Phase<GuidePageId>[] = [PHASE_1, PHASE_2]
+export const PHASES: Phase<GuidePageId>[] = [PHASE_1, PHASE_2, PHASE_3]
 
 export const GUIDE_PAGES: GuidePage<GuidePageId>[] = PHASES.flatMap((phase) => [
   phase.overview,

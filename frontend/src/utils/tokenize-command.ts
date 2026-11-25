@@ -16,7 +16,7 @@ const TOKEN_PATTERN = /"[^"]*"|'[^']*'|<[^>]+>|\s+|[^\s<"']+|./g
 const OPERATOR_PATTERN = /^(\||\|\||&&|&|>|>>|2>\/dev\/null)$/
 const STARTS_NEW_PROGRAM = ['|', '||', '&&']
 const PROGRAM_PREFIXES = ['sudo']
-const PROGRAMS_WITH_SUBCOMMAND = ['git', 'npm', 'apt', 'systemctl']
+const PROGRAMS_WITH_SUBCOMMAND = ['git', 'npm', 'apt', 'systemctl', 'docker']
 
 export function tokenizeCommand(command: string): CommandToken[] {
   const tokens: CommandToken[] = []
