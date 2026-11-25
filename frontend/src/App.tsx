@@ -1,46 +1,21 @@
 import type { ComponentType } from 'react'
-import { Route, Routes } from 'react-router'
+import { Navigate, Route, Routes } from 'react-router'
 import { GuideLayout } from './components/GuideLayout'
-import { GUIDE_PAGES, type GuidePageId } from './config/guide'
-import {
-  BreakIt,
-  Commands,
-  FinalCheck,
-  Overview,
-  Step1,
-  Step2,
-  Step3,
-  Step4,
-  Step5,
-  Step6,
-  Step7,
-  Step8,
-  Step9,
-  Step10,
-} from './pages/01-app-and-git'
+import { GUIDE_PAGES, PHASES, type GuidePageId } from './config/guide'
+import { APP_AND_GIT_PAGES } from './pages/01-app-and-git'
+import { LINUX_PAGES } from './pages/02-linux'
 import { NotFound } from './pages/NotFound'
 
 const PAGES: Record<GuidePageId, ComponentType> = {
-  overview: Overview,
-  'step-1': Step1,
-  'step-2': Step2,
-  'step-3': Step3,
-  'step-4': Step4,
-  'step-5': Step5,
-  'step-6': Step6,
-  'step-7': Step7,
-  'step-8': Step8,
-  'step-9': Step9,
-  'step-10': Step10,
-  commands: Commands,
-  'break-it': BreakIt,
-  'final-check': FinalCheck,
+  ...APP_AND_GIT_PAGES,
+  ...LINUX_PAGES,
 }
 
 function App() {
   return (
     <Routes>
       <Route element={<GuideLayout />}>
+        <Route index element={<Navigate to={PHASES[0].path} replace />} />
         {GUIDE_PAGES.map(({ id, path }) => {
           const Page = PAGES[id]
           return <Route key={id} path={path} element={<Page />} />

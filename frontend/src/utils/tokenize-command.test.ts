@@ -13,6 +13,8 @@ test.each([
   'npm create vite@latest frontend -- --template react-ts',
   'cd D:\\devops\\react-devops',
   'git commit -m "unclosed',
+  "sudo awk '{print $9}' /var/log/nginx/access.log | sort | uniq -c",
+  "printf '\\n[boot]\\nsystemd=true\\n' | sudo tee -a /etc/wsl.conf",
 ])('keeps the full text of %s', (command) => {
   const text = tokenizeCommand(command)
     .map((token) => token.text)
@@ -32,4 +34,16 @@ test('finds a placeholder inside an address', () => {
   const command = 'git remote add origin https://github.com/<GITHUB_USER>/devops-deployment-lab.git'
   expect(pick(command, 'placeholder')).toEqual(['<GITHUB_USER>'])
   expect(pick(command, 'option')).toEqual([])
+})
+
+test('finds the program after sudo', () => {
+  const command = 'sudo systemctl stop nginx'
+  expect(pick(command, 'program')).toEqual(['sudo', 'systemctl'])
+  expect(pick(command, 'subcommand')).toEqual(['stop'])
+})
+
+test('finds every program in a joined command', () => {
+  const command = 'find /etc -name "*.conf" 2>/dev/null | head'
+  expect(pick(command, 'program')).toEqual(['find', 'head'])
+  expect(pick(command, 'operator')).toEqual(['2>/dev/null', '|'])
 })

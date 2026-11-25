@@ -1,6 +1,6 @@
 import { useEffect, type ReactNode } from 'react'
 import { Link } from 'react-router'
-import { GUIDE_GROUPS, GUIDE_PAGES, getPageName, type GuidePageId } from '../config/guide'
+import { GUIDE_PAGES, findPhaseByPage, getPageName, type GuidePageId } from '../config/guide'
 import { SITE } from '../config/site'
 
 interface StepPageProps {
@@ -16,7 +16,9 @@ export function StepPage({ id, children }: StepPageProps) {
   const page = GUIDE_PAGES[index]
   const previous = GUIDE_PAGES[index - 1]
   const next = GUIDE_PAGES[index + 1]
-  const group = GUIDE_GROUPS.find((item) => item.pages.includes(page))
+  const phase = findPhaseByPage(id)
+  const group = phase.groups.find((item) => item.pages.some((groupPage) => groupPage.id === id))
+  const section = group && `${phase.label}: ${phase.name} / ${group.title}`
   const name = getPageName(page)
 
   useEffect(() => {
@@ -26,7 +28,7 @@ export function StepPage({ id, children }: StepPageProps) {
   return (
     <article className="max-w-3xl">
       <header className="border-b border-line pb-6">
-        <p className="text-sm text-muted">{group?.title}</p>
+        {section && <p className="text-sm text-muted">{section}</p>}
         <h1 className="mt-1 text-2xl font-semibold">{name}</h1>
       </header>
 

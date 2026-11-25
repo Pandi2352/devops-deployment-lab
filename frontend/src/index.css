@@ -9,7 +9,9 @@
   --color-line: #e2e8f0;
   --color-control-line: #858fa1;
   --color-primary: #1d4ed8;
+  --color-on-primary: #ffffff;
   --color-focus: #1d4ed8;
+  --color-timeline: #93c5fd;
 
   --color-command: #eff6ff;
   --color-command-line: #bfdbfe;
@@ -18,8 +20,8 @@
   --color-command-text: #166534;
   --color-command-placeholder: #be123c;
 
-  --spacing-sidebar: 17rem;
-  --spacing-header: 3.5rem;
+  --spacing-sidebar: 15rem;
+  --spacing-header: 3rem;
 }
 
 @layer base {

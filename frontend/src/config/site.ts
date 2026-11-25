@@ -1,8 +1,8 @@
-const REPO_URL = 'https://github.com/Pandi2352/devops-deployment-lab'
+const DOCS_URL = 'https://github.com/Pandi2352/devops-deployment-lab/blob/main/docs'
 
 export const SITE = {
   name: 'DevOps Lab',
   version: import.meta.env.VITE_APP_VERSION ?? 'dev',
-  costGuideUrl: `${REPO_URL}/blob/main/docs/COST-GUIDE.md`,
-  phase2Url: `${REPO_URL}/blob/main/docs/02-linux.md`,
+  costGuideUrl: `${DOCS_URL}/COST-GUIDE.md`,
+  phase3Url: `${DOCS_URL}/03-docker.md`,
 }
