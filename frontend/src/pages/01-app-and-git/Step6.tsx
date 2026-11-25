@@ -84,8 +84,7 @@ export function Step6() {
       />
       <Paragraph>
         <strong>LICENSE:</strong> create it on GitHub after step 8 in a pull request (Add file →
-        name it <InlineCode>LICENSE</InlineCode> → Choose a license template → MIT).{' '}
-        <span className="font-medium text-success">Done</span>
+        name it <InlineCode>LICENSE</InlineCode> → Choose a license template → MIT).
       </Paragraph>
       <Paragraph>Purpose: it tells other people how they may use your code.</Paragraph>
     </StepPage>

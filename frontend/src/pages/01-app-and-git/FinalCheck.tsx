@@ -30,14 +30,13 @@ const CHECK_COMMANDS: Command[] = [
   },
 ]
 
-export function DoneWhen() {
+export function FinalCheck() {
   return (
-    <StepPage id="done-when">
+    <StepPage id="final-check">
       <ul className="divide-y divide-line rounded-md border border-line bg-surface">
         {CHECKS.map(({ key, text }) => (
-          <li key={key} className="flex items-start justify-between gap-4 px-4 py-3 leading-7">
-            <span className="min-w-0">{text}</span>
-            <span className="shrink-0 text-sm leading-7 font-medium text-success">Done</span>
+          <li key={key} className="px-4 py-3 leading-7">
+            {text}
           </li>
         ))}
       </ul>

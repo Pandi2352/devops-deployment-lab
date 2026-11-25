@@ -30,9 +30,6 @@ export function GuideNav({ onNavigate }: GuideNavProps) {
                   <span className="min-w-0 flex-1">
                     {page.id === 'overview' ? 'Overview' : page.title}
                   </span>
-                  {page.done && (
-                    <span className="shrink-0 text-xs font-medium text-success">Done</span>
-                  )}
                 </NavLink>
               </li>
             ))}

@@ -5,7 +5,7 @@ import { GUIDE_PAGES, type GuidePageId } from './config/guide'
 import {
   BreakIt,
   Commands,
-  DoneWhen,
+  FinalCheck,
   Overview,
   Step1,
   Step2,
@@ -34,7 +34,7 @@ const PAGES: Record<GuidePageId, ComponentType> = {
   'step-10': Step10,
   commands: Commands,
   'break-it': BreakIt,
-  'done-when': DoneWhen,
+  'final-check': FinalCheck,
 }
 
 function App() {

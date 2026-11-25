@@ -12,13 +12,12 @@ export type GuidePageId =
   | 'step-10'
   | 'commands'
   | 'break-it'
-  | 'done-when'
+  | 'final-check'
 
 export interface GuidePage {
   id: GuidePageId
   path: string
   title: string
-  done: boolean
   step?: number
 }
 
@@ -30,40 +29,39 @@ export interface GuideGroup {
 export const GUIDE_GROUPS: GuideGroup[] = [
   {
     title: 'Phase 1',
-    pages: [{ id: 'overview', path: '/', title: 'Phase 1: App and Git (Free)', done: true }],
+    pages: [{ id: 'overview', path: '/', title: 'Phase 1: App and Git (Free)' }],
   },
   {
     title: 'Part A: Create the app',
     pages: [
-      { id: 'step-1', path: '/step-1', step: 1, title: 'Create the project', done: true },
-      { id: 'step-2', path: '/step-2', step: 2, title: 'Configure Tailwind', done: true },
-      { id: 'step-3', path: '/step-3', step: 3, title: 'Landing page', done: true },
-      { id: 'step-4', path: '/step-4', step: 4, title: 'Add one test', done: true },
-      { id: 'step-5', path: '/step-5', step: 5, title: 'Run everything', done: true },
+      { id: 'step-1', path: '/step-1', step: 1, title: 'Create the project' },
+      { id: 'step-2', path: '/step-2', step: 2, title: 'Configure Tailwind' },
+      { id: 'step-3', path: '/step-3', step: 3, title: 'Landing page' },
+      { id: 'step-4', path: '/step-4', step: 4, title: 'Add one test' },
+      { id: 'step-5', path: '/step-5', step: 5, title: 'Run everything' },
     ],
   },
   {
     title: 'Part B: Git and GitHub',
     pages: [
-      { id: 'step-6', path: '/step-6', step: 6, title: 'Root files', done: true },
-      { id: 'step-7', path: '/step-7', step: 7, title: 'First commit', done: true },
+      { id: 'step-6', path: '/step-6', step: 6, title: 'Root files' },
+      { id: 'step-7', path: '/step-7', step: 7, title: 'First commit' },
       {
         id: 'step-8',
         path: '/step-8',
         step: 8,
         title: 'Create the GitHub repo (on the website)',
-        done: true,
       },
-      { id: 'step-9', path: '/step-9', step: 9, title: 'Branch and pull request', done: true },
-      { id: 'step-10', path: '/step-10', step: 10, title: 'Protect main', done: true },
+      { id: 'step-9', path: '/step-9', step: 9, title: 'Branch and pull request' },
+      { id: 'step-10', path: '/step-10', step: 10, title: 'Protect main' },
     ],
   },
   {
     title: 'Practice and check',
     pages: [
-      { id: 'commands', path: '/commands', title: 'Commands to remember', done: false },
-      { id: 'break-it', path: '/break-it', title: 'Break it', done: false },
-      { id: 'done-when', path: '/done-when', title: 'Done when', done: true },
+      { id: 'commands', path: '/commands', title: 'Commands to remember' },
+      { id: 'break-it', path: '/break-it', title: 'Break it' },
+      { id: 'final-check', path: '/final-check', title: 'Final check' },
     ],
   },
 ]
