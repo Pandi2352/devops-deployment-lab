@@ -161,13 +161,35 @@ git add .
 git commit -m "Create React app and docs"
 ```
 
-### Step 8: Create the GitHub repo
+### Step 8: Create the GitHub repo (on the website)
+
+**Create it:**
+
+1. Log in to [github.com](https://github.com) and open https://github.com/new
+2. Repository name: `devops-deployment-lab` (lowercase, because container image names must be lowercase)
+3. Visibility: **Public**. For a private repo, first read the GitHub rows in [COST-GUIDE.md](COST-GUIDE.md).
+4. Leave **README, .gitignore and license off**. The repo must be empty, or your first push is rejected.
+5. Click **Create repository**.
+
+**Push your code (PowerShell, in `D:\devops\react-devops`):**
 
 ```powershell
-gh repo create devops-deployment-lab --public --source . --push
+git remote add origin https://github.com/<GITHUB_USER>/devops-deployment-lab.git
+git branch -M main
+git remote -v
+git push -u origin main
 ```
 
-Use a lowercase name: container image names must be lowercase. If you prefer a private repo, use `--private`, but then read the GitHub rows in [COST-GUIDE.md](COST-GUIDE.md).
+Replace `<GITHUB_USER>` with your GitHub username. On the first push, a browser window may ask you to log in to GitHub.
+
+| Error | Fix |
+|---|---|
+| `remote origin already exists` | `git remote set-url origin https://github.com/<GITHUB_USER>/devops-deployment-lab.git` |
+| `src refspec main does not match any` | You have no commit yet. Do step 7 |
+| `Repository not found` | Check the username, repo name, and which GitHub account you logged in with |
+| `rejected ... fetch first` | The repo was not empty. If it has only the files GitHub created, delete it on GitHub and create it again empty |
+
+Refresh the GitHub page. You should see your files.
 
 ### Step 9: Branch and pull request
 
@@ -181,11 +203,17 @@ Change the paragraph text in `App.tsx`, then:
 git add .
 git commit -m "Change landing page text"
 git push -u origin feat/change-title
-gh pr create --fill
-gh pr view --web
 ```
 
-Read your own diff, merge it on GitHub, then:
+Then on the GitHub website:
+
+1. Open your repo and click **Compare & pull request** (or Pull requests → New).
+2. Base: `main`, compare: `feat/change-title`.
+3. Click **Create pull request**.
+4. Read your own diff in **Files changed**.
+5. Click **Merge pull request**, then **Delete branch**.
+
+Back in PowerShell:
 
 ```powershell
 git switch main
