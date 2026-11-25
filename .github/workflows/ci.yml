@@ -31,3 +31,11 @@ jobs:
       - run: npm run lint
       - run: npm test
       - run: npm run build
+
+  image:
+    needs: verify
+    if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request'
+    permissions:
+      contents: read
+      packages: write
+    uses: ./.github/workflows/docker-build.yml
