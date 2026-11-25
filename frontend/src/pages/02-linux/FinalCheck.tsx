@@ -5,10 +5,10 @@ import {
   NumberedList,
   Paragraph,
   SectionTitle,
-  TextLink,
 } from '../../components/Content'
+import { PageLink } from '../../components/PageLink'
 import { StepPage } from '../../components/StepPage'
-import { SITE } from '../../config/site'
+import { PHASE_3 } from '../../config/phases/phase-3'
 
 const CHECKS = [
   {
@@ -67,7 +67,7 @@ export function FinalCheck() {
       <Note>Do this only after the pull request is merged.</Note>
       <CommandBlock commands={TAG} />
       <Paragraph>
-        Next: <TextLink href={SITE.phase3Url}>Phase 3</TextLink>
+        Next: <PageLink to={PHASE_3.path}>Phase 3</PageLink>
       </Paragraph>
     </StepPage>
   )
