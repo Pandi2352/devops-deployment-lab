@@ -1,6 +1,6 @@
 export { BreakIt } from './BreakIt'
 export { Commands } from './Commands'
-export { DoneWhen } from './DoneWhen'
+export { FinalCheck } from './FinalCheck'
 export { Overview } from './Overview'
 export { Step1 } from './Step1'
 export { Step2 } from './Step2'

@@ -24,12 +24,9 @@ export function Overview() {
               <li key={page.id}>
                 <Link
                   to={page.path}
-                  className="flex min-h-11 items-center justify-between gap-4 rounded-md px-4 py-3 hover:bg-subtle"
+                  className="flex min-h-11 items-center rounded-md px-4 py-3 hover:bg-subtle"
                 >
                   <span className="text-primary">{getPageName(page)}</span>
-                  {page.done && (
-                    <span className="shrink-0 text-sm font-medium text-success">Done</span>
-                  )}
                 </Link>
               </li>
             ))}

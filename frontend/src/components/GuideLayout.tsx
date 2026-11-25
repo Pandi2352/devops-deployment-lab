@@ -68,7 +68,7 @@ export function GuideLayout() {
         <nav
           id="guide-nav"
           aria-label="Guide steps"
-          className={`border-b border-line bg-surface p-4 lg:sticky lg:top-header lg:block lg:h-[calc(100vh-var(--spacing-header))] lg:w-sidebar lg:shrink-0 lg:overflow-y-auto lg:border-r lg:border-b-0 ${
+          className={`border-b border-line bg-surface p-4 lg:sticky lg:top-header lg:block lg:h-[calc(100vh-var(--spacing-header))] lg:w-sidebar lg:shrink-0 lg:overflow-y-auto lg:scrollbar-slim lg:border-r lg:border-b-0 ${
             isMenuOpen ? 'block' : 'hidden'
           }`}
         >

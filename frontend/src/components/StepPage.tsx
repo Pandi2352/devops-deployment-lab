@@ -28,7 +28,6 @@ export function StepPage({ id, children }: StepPageProps) {
       <header className="border-b border-line pb-6">
         <p className="text-sm text-muted">{group?.title}</p>
         <h1 className="mt-1 text-2xl font-semibold">{name}</h1>
-        {page.done && <p className="mt-2 text-sm font-medium text-success">Status: Done</p>}
       </header>
 
       <div className="space-y-5 py-6">{children}</div>
