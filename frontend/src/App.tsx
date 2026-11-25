@@ -5,12 +5,14 @@ import { GUIDE_PAGES, PHASES, type GuidePageId } from './config/guide'
 import { APP_AND_GIT_PAGES } from './pages/01-app-and-git'
 import { LINUX_PAGES } from './pages/02-linux'
 import { DOCKER_PAGES } from './pages/03-docker'
+import { ACTIONS_PAGES } from './pages/04-github-actions'
 import { NotFound } from './pages/NotFound'
 
 const PAGES: Record<GuidePageId, ComponentType> = {
   ...APP_AND_GIT_PAGES,
   ...LINUX_PAGES,
   ...DOCKER_PAGES,
+  ...ACTIONS_PAGES,
 }
 
 function App() {

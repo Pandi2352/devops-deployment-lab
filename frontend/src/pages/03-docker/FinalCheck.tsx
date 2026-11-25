@@ -5,10 +5,10 @@ import {
   NumberedList,
   Paragraph,
   SectionTitle,
-  TextLink,
 } from '../../components/Content'
+import { PageLink } from '../../components/PageLink'
 import { StepPage } from '../../components/StepPage'
-import { SITE } from '../../config/site'
+import { PHASE_4 } from '../../config/phases/phase-4'
 
 const CHECKS = [
   { key: 'version', text: 'The app runs at http://localhost:8080 with the correct version' },
@@ -67,7 +67,7 @@ export function FinalCheck() {
       <Note>Do this only after the pull request is merged.</Note>
       <CommandBlock commands={TAG} />
       <Paragraph>
-        Next: <TextLink href={SITE.phase4Url}>Phase 4</TextLink>
+        Next: <PageLink to={PHASE_4.path}>Phase 4</PageLink>
       </Paragraph>
     </StepPage>
   )
